@@ -13,5 +13,9 @@ ebuzaneli/buzza-phpmyadmin - > Php my Admin
 
 ebuzaneli/buzza-server-mysql -> Servidor de BD Mysql - 5.6
 
+ebuzaneli/buzza-server-ssh -> Servidor SSH
+
+Outras imagens utilizadas neste projeto
+-----------------------------------------
 tutum/apache-php -> Servidor Apache 2.0 e PHP Version 5.5.9
 
