@@ -8,7 +8,7 @@ O Script fará todas as instalações e as configurações necessárias para o s
 Para clonar os arquivos digite: git clone https://github.com/eniomarcelo/docker-lamp
 
 
-Para me encontrar no Docker Hub procure por ebuzabeli.
+Para me encontrar no Docker Hub procure por ebuzaneli.
 
 Minhas imagens no Docker Hub
 ------------------------------
