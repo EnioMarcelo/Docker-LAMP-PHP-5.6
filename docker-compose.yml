@@ -12,6 +12,8 @@ services:
      links:
        - db
      restart: always
+     environment:
+       - TZ=America/Campo_Grande
      networks:
         buzza-protocolo-network:
            ipv4_address: 10.5.0.7
@@ -27,6 +29,7 @@ services:
       environment:
          - MYSQL_ROOT_PASSWORD=123456
          - MYSQL_DATABASE=db_buzza
+         - TZ=America/Campo_Grande
       restart: always
       networks:
          buzza-protocolo-network:
@@ -56,6 +59,7 @@ services:
       environment:
          - "SSH_USER=buzza"
          - "SSH_PASSWORD=102030" 
+         - TZ=America/Campo_Grande
       volumes:
          - $PWD/www:/var/www/html
       ports:
