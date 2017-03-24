@@ -5,7 +5,10 @@ Servidor LAMP com Docker
 Com este scrript você conseguirá criar um servidor LAMP no Docker.
 O Script fará todas as instalações e as configuraçes necessárias para o servidor funcionar, bem simples e fácil, basta saber um pouco de Docker.
 
-Para me encontrar na Docker Hub procure por ebuzabeli.
+Para clonar os arquivos digite: git clone https://github.com/eniomarcelo/docker-lamp
+
+
+Para me encontrar no Docker Hub procure por ebuzabeli.
 
 Minhas imagens no Docker Hub
 ------------------------------
