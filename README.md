@@ -1,5 +1,6 @@
 # Docker-LAMP
 Servidor LAMP com Docker
+- Linux, Apache, MySQL, PHP
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 Com este scrript você conseguirá criar um servidor LAMP no Docker.
