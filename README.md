@@ -3,7 +3,7 @@ Servidor LAMP com Docker
 - Linux, Apache, MySQL, PHP
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-Com este scrript você conseguirá criar um servidor LAMP no Docker.
+Com este script você conseguirá criar um servidor LAMP no Docker.
 O Script fará todas as instalações e as configurações necessárias para o servidor funcionar, bem simples e fácil, basta saber um pouco de Docker.
 
 Para clonar os arquivos digite: git clone https://github.com/eniomarcelo/docker-lamp
