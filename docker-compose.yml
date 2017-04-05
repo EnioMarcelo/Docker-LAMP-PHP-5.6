@@ -2,13 +2,14 @@ version: '2'
 
 services:
    web:
-     image: tutum/apache-php 
+     image: ebuzaneli/buzza-server-apache2-php5 
      hostname: buzza-server-apache
      container_name: buzza-server-apache
      ports: 
        - "8080:80"
+       - "443:443"
      volumes:
-       - $PWD/www:/app
+       - $PWD/www:/var/www/html
      links:
        - db
      restart: always
