@@ -13,6 +13,8 @@ services:
      links:
        - db
      restart: always
+     depends_on:
+        - db
      environment:
        - TZ=America/Campo_Grande
      networks:
@@ -48,6 +50,8 @@ services:
       ports:
          - '8082:80' 
       restart: always
+      depends_on:
+         - db
       networks:
          buzza-protocolo-network:
             ipv4_address: 10.5.0.5
