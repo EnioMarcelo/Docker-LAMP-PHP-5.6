@@ -1,5 +1,5 @@
-# Docker-LAMP
-Servidor LAMP com Docker
+# Docker-LAMP-PHP-5.6
+Servidor LAMP PHP 5.6 com Docker
 - Linux, Apache, MySQL, PHP
 ------------------------------------------------------------------------------------------------------------------------------------------
 
