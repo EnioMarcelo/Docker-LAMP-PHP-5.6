@@ -10,13 +10,14 @@ services:
        - "443:443"
      volumes:
        - $PWD/www:/var/www/html
+       - $PWD/php/php.ini:/etc/php5/apache2/php.ini
      links:
        - db
      restart: always
-     depends_on:
-        - db
      environment:
        - TZ=America/Campo_Grande
+     depends_on:
+        - db
      networks:
         buzza-protocolo-network:
            ipv4_address: 10.5.0.7
