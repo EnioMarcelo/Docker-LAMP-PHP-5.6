@@ -6,11 +6,11 @@ services:
      hostname: buzza-server-apache
      container_name: buzza-server-apache
      ports: 
-       - "8080:80"
-       - "443:443"
+       - "9090:80"
+       - "4493:443"
      volumes:
-       - $PWD/www:/var/www/html
-       - $PWD/php/php.ini:/etc/php5/apache2/php.ini
+       - /Users/eniomarcelobuzaneli/Documents/Docker/Docker-LAMP-PHP-5.6/www:/var/www/html
+       - /Users/eniomarcelobuzaneli/Documents/Docker/Docker-LAMP-PHP-5.6/php/php.ini:/etc/php5/apache2/php.ini
      links:
        - db
      restart: always
@@ -19,8 +19,7 @@ services:
      depends_on:
         - db
      networks:
-        buzza-protocolo-network:
-           ipv4_address: 10.5.0.7
+        - buzza-protocolo-network
 
    db:
       image: ebuzaneli/buzza-server-mysql:5.6
@@ -29,15 +28,14 @@ services:
       ports:
          - "3307:3306"
       volumes:
-         - $PWD/mysql-data:/var/lib/mysql
+         - /Users/eniomarcelobuzaneli/Documents/Docker/Docker-LAMP-PHP-5.6/mysql-data:/var/lib/mysql
       environment:
          - MYSQL_ROOT_PASSWORD=123456
          - MYSQL_DATABASE=db_buzza
          - TZ=America/Campo_Grande
       restart: always
       networks:
-         buzza-protocolo-network:
-            ipv4_address: 10.5.0.6
+         - buzza-protocolo-network
 
    phpmyadmin:
       image: ebuzaneli/buzza-phpmyadmin:latest 
@@ -54,9 +52,7 @@ services:
       depends_on:
          - db
       networks:
-         buzza-protocolo-network:
-            ipv4_address: 10.5.0.5
-
+         - buzza-protocolo-network
 
    ssh:
       image: ebuzaneli/buzza-server-ssh:latest 
@@ -67,20 +63,15 @@ services:
          - "SSH_PASSWORD=102030" 
          - TZ=America/Campo_Grande
       volumes:
-         - $PWD/www:/var/www/html
+         - /Users/eniomarcelobuzaneli/Documents/Docker/Docker-LAMP-PHP-5.6/www:/var/www/html
       ports:
          - '2222:22'
       restart: always
       networks:
-         buzza-protocolo-network:
-            ipv4_address: 10.5.0.4
-
-
+         - buzza-protocolo-network
 
 networks:
-  buzza-protocolo-network:
+   buzza-protocolo-network:
     driver: bridge
-    ipam:
-     config:
-       - subnet: 10.5.0.0/16
-         gateway: 10.5.0.1      
+
+
